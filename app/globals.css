@@ -24,3 +24,51 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Hide Next.js/Turbopack development overlays in dev mode */
+[id^="__next_dev"],
+[class*="next-dev"],
+[class*="nextjs"],
+[data-nextjs],
+[data-next-dev],
+[role="dialog"] > [aria-label="Route"] {
+  display: none !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
+
+/* Hide footer dev indicator and any remaining overlay badge */
+#__next_dev_page,
+.nextjs-devtools,
+.remix-devtools,
+.turbopack-devtools {
+  display: none !important;
+}
+
+
+:root {
+  --merck-bg: #f5f8fb;
+  --merck-surface: #ffffff;
+  --merck-foreground: #0d2f5c;
+  --merck-muted: #4f647d;
+  --merck-border: #d6e6f6;
+  --merck-primary: #005eb8;
+  --merck-primary-dark: #00448d;
+  --merck-success: #0f9d58;
+  --merck-warning: #f6a800;
+  --merck-danger: #df4c3a;
+}
+
+@layer utilities {
+  .bg-merck-surface { background-color: var(--merck-surface); }
+  .bg-merck-bg { background-color: var(--merck-bg); }
+  .text-merck { color: var(--merck-foreground); }
+  .text-merck-muted { color: var(--merck-muted); }
+  .border-merck { border-color: var(--merck-border); }
+  .bg-merck-primary { background-color: var(--merck-primary); }
+  .bg-merck-primary-dark { background-color: var(--merck-primary-dark); }
+  .bg-merck-warning { background-color: var(--merck-warning); }
+  .ring-merck { ring-color: var(--merck-border); }
+  .hover\:bg-merck-primary-dark:hover { background-color: var(--merck-primary-dark); }
+}
+
