@@ -41,7 +41,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 - React + Next.js App Router (client component for interactive UI)
 - Local state in component (useState/useMemo) for quick prototyping
 - Data set scaling: 200 items in-memory; table and filters remain responsive
-- Accessibility: `aria-label`, `aria-pressed`, semantic HTML and keyboard focus styles
+- Accessibility: `aria-label`semantic HTML and keyboard focus styles
 
 ### To present
 - Show runtime at `http://localhost:3000`
